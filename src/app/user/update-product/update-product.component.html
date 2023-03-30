@@ -1,0 +1,31 @@
+<div class="max-w-7xl mx-auto">
+    <h3>update product</h3>
+    <form (ngSubmit)="onSubmit()" *ngIf="product" >
+        <div class="form-group">
+            <label>title:</label>
+            <input type="text" class="form-control" id="title"  [(ngModel)]="product.title" name="title">
+    
+        </div>
+        <div class="form-group">
+            <label>price:</label>
+            <input type="number" class="form-control" id="price" [(ngModel)]="product.price" name="price">
+    
+        </div>
+        <div class="form-group">
+            <label>category:</label>
+            <input type="text" class="form-control" id="category" [(ngModel)]="product.category" name="category">
+    
+        </div>
+        <div class="form-group">
+            <label>desc:</label>
+            <input type="text" class="form-control" id="description" [(ngModel)]="product.description" name="description">
+    
+        </div>
+        <div class="form-group">
+            <label>image:</label>
+            <input type="file" class="form-control" id="image" value={{product.image}} name="image">
+    
+        </div>
+        <button class="btn btn-light" type="submit">Submit</button>
+    </form>
+    </div>
